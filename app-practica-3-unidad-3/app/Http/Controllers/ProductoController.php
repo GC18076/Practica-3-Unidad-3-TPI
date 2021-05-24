@@ -30,7 +30,7 @@ class ProductoController extends Controller
         $producto->imagen_url = $request->imagen_url;
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
-        $producto->cantidad = $producto->cantidad;
+        $producto->cantidad = $request->cantidad;
         $result = $producto->save();
         if($result){
             return response($producto, 201);
