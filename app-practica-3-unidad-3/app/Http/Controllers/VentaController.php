@@ -14,7 +14,9 @@ class VentaController extends Controller
      */
     public function index()
     {
-        //
+        $ventas = Venta::all();
+        $ventas->load(['users', 'productos']);
+        return $ventas;
     }
 
     /**
@@ -25,7 +27,20 @@ class VentaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $venta = new Venta();
+        $venta->user_id = $request->user_id;
+        $venta->producto_id = $request->producto_id;
+        $venta->cantidad = $request->cantidad;
+        $venta->precio = $request->precio;
+        $venta->metodo_de_pago = $request->metodo_de_pago;
+        $venta->metodo_de_envio = $request->metodo_de_envio;
+        $venta->direccion = $request->direccion;
+        $result = $venta->save();
+        if($result){
+            return response($venta, 201);
+        } else {
+            return response('fallo', 400);
+        }
     }
 
     /**

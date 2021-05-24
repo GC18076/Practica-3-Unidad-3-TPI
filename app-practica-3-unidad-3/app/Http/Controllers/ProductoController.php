@@ -14,7 +14,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        return Producto::all();
     }
 
     /**
@@ -25,7 +25,18 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $producto = new Producto();
+        $producto->nombre = $request->nombre;
+        $producto->imagen_url = $request->imagen_url;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->cantidad = $producto->cantidad;
+        $result = $producto->save();
+        if($result){
+            return response($producto, 201);
+        } else {
+            return response('fallo', 400);
+        }
     }
 
     /**

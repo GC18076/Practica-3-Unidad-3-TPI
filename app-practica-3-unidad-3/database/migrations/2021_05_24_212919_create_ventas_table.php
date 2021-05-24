@@ -22,8 +22,8 @@ class CreateVentasTable extends Migration
             $table->unsignedInteger('cantidad');
             $table->float('total');
             $table->string('direccion');
-            $table->string('metodo de pago');
-            $table->string('metodo de envio');
+            $table->string('metodo_de_pago');
+            $table->string('metodo_de_envio');
             $table->timestamps();
         });
     }
