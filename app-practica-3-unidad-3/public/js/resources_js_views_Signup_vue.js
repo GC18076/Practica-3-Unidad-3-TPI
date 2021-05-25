@@ -70,10 +70,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 switch (_context.prev = _context.next) {
                   case 0:
                     _context.next = 2;
-                    return _this.$store.dispatch('auth/getUser');
+                    return _this.$store.dispatch('getUser');
 
                   case 2:
-                    _this.$router.replace('/dashboard');
+                    _this.$router.replace('/');
 
                   case 3:
                   case "end":
