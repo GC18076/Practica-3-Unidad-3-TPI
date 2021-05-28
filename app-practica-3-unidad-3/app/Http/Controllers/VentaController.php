@@ -15,7 +15,7 @@ class VentaController extends Controller
     public function index()
     {
         $ventas = Venta::all();
-        $ventas->load(['users', 'productos']);
+        $ventas->load(['user', 'producto']);
         return $ventas;
     }
 
@@ -31,7 +31,7 @@ class VentaController extends Controller
         $venta->user_id = $request->user_id;
         $venta->producto_id = $request->producto_id;
         $venta->cantidad = $request->cantidad;
-        $venta->precio = $request->precio;
+        $venta->total = $request->total;
         $venta->metodo_de_pago = $request->metodo_de_pago;
         $venta->metodo_de_envio = $request->metodo_de_envio;
         $venta->direccion = $request->direccion;

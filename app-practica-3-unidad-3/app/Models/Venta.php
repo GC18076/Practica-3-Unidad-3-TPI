@@ -13,7 +13,7 @@ class Venta extends Model
 
     public function producto()
     {
-        return $this->hasOne(Producto::class);
+        return $this->belongsTo(Producto::class);
     }
 
     public function user()
