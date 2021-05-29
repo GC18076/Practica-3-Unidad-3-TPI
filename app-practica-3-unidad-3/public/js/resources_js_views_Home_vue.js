@@ -29,6 +29,37 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 (axios__WEBPACK_IMPORTED_MODULE_1___default().defaults.withCredentials) = true;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -44,7 +75,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 switch (_context.prev = _context.next) {
                   case 0:
                     _context.next = 2;
-                    return _this.$store.dispatch('getUser');
+                    return _this.$store.dispatch("getUser");
 
                   case 2:
                   case "end":
@@ -156,23 +187,93 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm.$store.state.user == null
-        ? _c("v-btn", { attrs: { color: "green", to: "/login" } }, [
-            _vm._v("Login")
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.$store.state.user == null
-        ? _c("v-btn", { attrs: { color: "blue", to: "/register" } }, [
-            _vm._v("Registrar")
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.$store.state.user != null
-        ? _c("v-btn", { attrs: { color: "red" }, on: { click: _vm.logout } }, [
-            _vm._v("Logout")
-          ])
-        : _vm._e()
+      _c(
+        "v-container",
+        { attrs: { fluid: "" } },
+        [
+          _c(
+            "v-row",
+            { staticClass: "justify-center" },
+            [
+              _c(
+                "v-col",
+                { attrs: { cols: "8" } },
+                [
+                  _c(
+                    "v-card",
+                    [
+                      _c("v-card-title", [
+                        _vm._v(
+                          "\n                        Práctica 3 - Unidad 3 TPI\n                    "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-text",
+                        [
+                          _c(
+                            "v-row",
+                            { staticClass: "justify-center" },
+                            [
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "4" } },
+                                [
+                                  _vm.$store.state.user == null
+                                    ? _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            block: "",
+                                            color: "green",
+                                            to: "/login"
+                                          }
+                                        },
+                                        [_vm._v("Iniciar sesión")]
+                                      )
+                                    : _vm._e()
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "4" } },
+                                [
+                                  _vm.$store.state.user == null
+                                    ? _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            block: "",
+                                            color: "blue",
+                                            to: "/register"
+                                          }
+                                        },
+                                        [_vm._v("Registrar")]
+                                      )
+                                    : _vm._e()
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
     ],
     1
   )

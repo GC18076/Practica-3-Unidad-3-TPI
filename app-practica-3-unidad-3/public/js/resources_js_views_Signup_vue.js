@@ -73,7 +73,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     return _this.$store.dispatch('getUser');
 
                   case 2:
-                    _this.$router.replace('/');
+                    _this.$router.replace('/dashboard');
 
                   case 3:
                   case "end":

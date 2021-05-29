@@ -41,7 +41,7 @@ export default {
             axios.get("/sanctum/csrf-cookie").then(response => {
                 axios.post('/register', this.user).then(async response => {
                     await this.$store.dispatch('getUser');
-                    this.$router.replace('/');
+                    this.$router.replace('/dashboard');
                 });
             });
         }

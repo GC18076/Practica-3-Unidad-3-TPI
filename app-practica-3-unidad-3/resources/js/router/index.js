@@ -19,6 +19,11 @@ const routes = [
         name: 'Register',
         component: () => import('../views/Signup.vue'),
     },
+    {
+        path: '/dashboard',
+        name: 'Dashbioard',
+        component: () => import('../views/Dashboard.vue')
+    }
 ];
 
 const router = new VueRouter({
